@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 학습을 위한 Vite 커스텀 템플릿</title>
+    <meta
+      name="description"
+      content="Vite 빌드 도구를 사용해 React 프로젝트 자동 스캐폴드하는 템플릿을 구성합니다."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/pretendard/dist/web/static/pretendard.css"
+      as="style"
+      crossorigin
+    />
+    <link
+      rel="icon"
+      href="/react.svg"
+      type="image/svg+xml"
+    />
+    <script
+      type="module"
+      src="./src/main.tsx"
+    ></script>
+  </head>
+
+  <body>
+
+    <noscript>이 사이트를 이용하려면? 사용 중인 웹 브라우저에서 JavaScript를 활성화 해야 합니다.</noscript>
+
+    <div id="root"></div>
+
+    <div
+      class="html-form-demo"
+      hidden
+    >
+      <section style="margin-inline: 48px">
+        <h2>로그인 폼 (POST 메서드)</h2>
+        <form
+          action="http://localhost:4000/api/signin"
+          method="POST"
+        >
+          <div style="margin-block-end: 8px">
+            <label for="userEmailSignIn">이메일</label>
+            <input
+              type="email"
+              name="useremail"
+              id="userEmailSignIn"
+            />
+          </div>
+          <div style="margin-block-end: 8px">
+            <label for="userPasswordSignIn">패스워드</label>
+            <input
+              type="password"
+              name="userpassword"
+              id="userPasswordSignIn"
+            />
+          </div>
+          <button type="submit">로그인</button>
+          <button type="reset">초기화</button>
+        </form>
+      </section>
+      <hr style="margin-block-start: 32px;" />
+      <section style="margin-inline: 48px">
+        <h2>회원가입 폼 (POST 메서드)</h2>
+        <form
+          action="http://localhost:4000/api/signup"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          <div style="margin-block-end: 8px">
+            <label for="usernameSignUp">이름</label>
+            <input
+              type="text"
+              name="username"
+              id="usernameSignUp"
+            />
+          </div>
+          <div style="margin-block-end: 8px">
+            <label for="userEmailSignUp">이메일</label>
+            <input
+              type="email"
+              name="useremail"
+              id="userEmailSignUp"
+            />
+          </div>
+          <div style="margin-block-end: 8px">
+            <label for="userPasswordSignUp">패스워드</label>
+            <input
+              type="password"
+              name="userpassword"
+              id="userPasswordSignUp"
+            />
+          </div>
+          <div style="margin-block-end: 8px">
+            <label for="userProfileSignUp">프로필 이미지</label>
+            <input
+              type="file"
+              name="userprofile"
+              id="userProfileSignUp"
+              accept=".jpg,.jpeg,.png,.svg,.webp"
+            />
+          </div>
+          <button type="submit">회원가입</button>
+          <button type="reset">초기화</button>
+        </form>
+      </section>
+      <hr style="margin-block-start: 32px;" />
+      <section style="margin-inline: 48px">
+        <h2>
+          헬로!~ <abbr title="Hyper Text Markup Language">HTML</abbr> Form 컨트롤
+          (GET
+          메서드)
+        </h2>
+        <form action="http://localhost:4000/api/hello">
+          <div style="margin-block-end: 8px">
+            <label for="usernameInput">이름</label>
+            <input
+              type="text"
+              name="username"
+              id="usernameInput"
+            />
+          </div>
+          <div style="margin-block-end: 8px">
+            <label for="userEmailInput">이메일</label>
+            <input
+              type="email"
+              name="useremail"
+              id="userEmailInput"
+            />
+          </div>
+          <button type="submit">제출</button>
+          <button type="reset">초기화</button>
+        </form>
+      </section>
+    </div>
+
+  </body>
+
+</html>
