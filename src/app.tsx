@@ -1,7 +1,9 @@
-import Playground from './playground';
+import SignIn from "./components/form-ex/signIn";
 
 function App() {
-  return <Playground />;
+  return (
+    <SignIn />
+  );
 }
 
 export default App;
