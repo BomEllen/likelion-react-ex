@@ -1,8 +1,10 @@
-import SignIn from "./components/form-ex/signIn";
+import Cart from "./components/ShoppingCart-ex/Cart";
 
 function App() {
   return (
-    <SignIn />
+    <div>
+      <Cart />
+    </div>
   );
 }
 

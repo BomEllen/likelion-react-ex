@@ -1,0 +1,98 @@
+
+
+/* Cart 컴포넌트 */
+.cart-container {
+  border: 3px dashed green;
+  background-color: rgb(252, 247, 239);
+  border-radius: 0.625rem;
+  min-width: 20rem;
+  width: 60vw;
+  height: 50vh;
+  margin: 6.25rem;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.cart-title {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+
+    img {
+      width: 1.875rem;
+      height: 1.875rem;
+      margin: 0 0.9375rem;
+    }
+}
+
+.cart-productData {
+  width: 100%;
+}
+
+.cart-sum-price {
+  text-align: right;
+  padding-right: 20px;
+  font-weight: bolder;
+  color: green;
+  border-top: 1px solid gray;
+}
+
+
+
+
+
+/* CartItem 컴포넌트 */
+
+.cart-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.cart-items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CartButton 컴포넌트 */
+.cart-button-container {
+  border: 1px solid rgb(199, 199, 199);
+  background-color: rgb(240, 240, 240);
+  border-radius: 1.875rem;
+  width: fit-content;
+  padding: 0 0.625rem;
+
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: rgb(155, 155, 155);
+  }
+
+}

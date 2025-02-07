@@ -1,9 +1,12 @@
+/* body */
 form {
   background-color: orange;
   width: 100vw;
   height: 100vh;
 }
 
+
+/* 버튼 */
 .btn {
   background-color: #3673FF;
   color: white;
