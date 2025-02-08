@@ -12,12 +12,16 @@
 - 쇼핑 카트 항목의 수량을 증가 또는 감소하는 버튼을 클릭하면 상품 총액 합계가 자동 계산 되어 구매 총액으로 화면에 출력 및 표시되게 한다.
 - 현재 재고 물량 이상의 수량은 추가될 수 없으며, 최소 수량은 1개 이다.
 
-![과제에서 고려한 사항](/public/src/md/consider.png)
+![과제에서 고려한 사항](https://github.com/user-attachments/assets/0036a458-4278-4cfc-8309-855e4be4701c)
+
 위 사항들은 이번 과제를 진행하며 고려한 내용의 목록 입니다.
 
 
+<br/>
+<br/>
+
 ## ✅ 컴포넌트 설명
-![컴포넌트 설명](/public/src/md/markUp.png)
+![컴포넌트 설명](https://github.com/user-attachments/assets/b78b77fc-838e-467e-b045-0f76f77a10b3)
 컴포넌트는 위 사진과 같이 분리하였습니다.
 
 - `Cart.tsx` 가장 큰 단위로 작은 컴포넌트들이 모여있는 컴포넌트
@@ -26,34 +30,43 @@
 
 마음 같아서는 컴포넌트를 원자 단위로 더 쪼개고 쪼개어 구성해보고 싶었으나 상태관리 부분에 있어서 역량 부족으로..😅 우선 위와 같이 조금 큰 단위의 컴포넌트들로 쪼개어 보았습니다.
 
+<br/>
+<br/>
 
 ## ✅ 스타일링 설명
 
 스타일링 방식은 여러 컴포넌트들을 구성하는 리액트의 특성과 잘 맞게 클래스 이름이 중첩되지 않게 해준다는 점이 마음에 들어 `CSS Module` 방식을 사용해 보았습니다.
 
 
-![CssModule이 적용 된 클래스 명 이미지](/public/src/md/className.png)
+![CssModule이 적용 된 클래스 명 이미지](https://github.com/user-attachments/assets/09c28fce-ed14-47f7-aec2-ce1d9f348e17)
 
 위 개발자 모드 사진을 보시면 CSS Module이 잘 적용된 것을 보실 수 있습니다.
 
 ### ✨ 디자인 커스텀
-![커스텀한 디자인 이미지](/public/src/md/design.png)
+![커스텀한 디자인 이미지](https://github.com/user-attachments/assets/7d8f619e-8094-404e-9be1-2fb13a55ef6d)
 
 장바구니를 조금 제 스타일대로 꾸며보았습니다. 바꾼 것은 배경색과 border type 정도지만 꽤 만족스러운 디자인이 되었습니다✨
 
 
+<br/>
+<br/>
+
 ## ✅ Lighthouse 결과
-![Lighthouse 결과 이미지](/public/src/md/Lighthouse.png)
+![Lighthouse 결과 이미지](https://github.com/user-attachments/assets/fa4c493c-d0b8-4fa3-8070-33630592dee7)
 
 접근성 준수가 잘 되었나 궁금하여 Lighthouse를 이용하여 성능 측정을 해보았습니다. 다행히 접근성 부분에서 100점이 나왔습니다.
 
-
+<br/>
+<br/>
 
 ## ✅ 구현 결과
-![구현 결과 gif](https://github.com/user-attachments/assets/1259b8e9-f410-42fc-8a8e-2ee726506af5)
+![구현 결과 gif](https://github.com/user-attachments/assets/98474b58-ba80-4b6d-a2c0-b5aa283a6e68)
 
 
 구현 결과는 위와 같습니다. 최소 픽셀인 320px보다 작은 화면으로 줄이려고 하면 내부의 요소가 ```overflow: hidden;``` 처리 되게 됩니다.
+
+<br/>
+<br/>
 
 
 ## ✅ 느낀 점
@@ -64,3 +77,8 @@
 바닐라 js에서 상태를 주고 받았던 것 보다는 확실히 편하다는 것을 느끼고 있지만, 아직은 익숙치 않아 어렵게 느껴지는 것 같습니다ㅎㅎ 익숙해지면 이 편리함을 온전히 느끼는 날이 있겠지요!
 
 쉬는 날에도 열심히 피드백 해주시는 야무쌤(aka 얌쌤🍙) 감사합니다 :>
+
+
+
+<br/>
+<br/>
