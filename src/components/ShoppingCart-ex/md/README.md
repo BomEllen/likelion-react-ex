@@ -50,7 +50,8 @@
 
 
 ## ✅ 구현 결과
-![구현 결과 gif](/public/src/md/output.gif)
+![구현 결과 gif](https://github.com/user-attachments/assets/1259b8e9-f410-42fc-8a8e-2ee726506af5)
+
 
 구현 결과는 위와 같습니다. 최소 픽셀인 320px보다 작은 화면으로 줄이려고 하면 내부의 요소가 ```overflow: hidden;``` 처리 되게 됩니다.
 
