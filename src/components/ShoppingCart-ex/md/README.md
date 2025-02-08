@@ -12,12 +12,12 @@
 - 쇼핑 카트 항목의 수량을 증가 또는 감소하는 버튼을 클릭하면 상품 총액 합계가 자동 계산 되어 구매 총액으로 화면에 출력 및 표시되게 한다.
 - 현재 재고 물량 이상의 수량은 추가될 수 없으며, 최소 수량은 1개 이다.
 
-![과제에서 고려한 사항](./consider.png)
+![과제에서 고려한 사항](/public/src/md/consider.png)
 위 사항들은 이번 과제를 진행하며 고려한 내용의 목록 입니다.
 
 
 ## ✅ 컴포넌트 설명
-![컴포넌트 설명](./markUp.png)
+![컴포넌트 설명](/public/src/md/markUp.png)
 컴포넌트는 위 사진과 같이 분리하였습니다.
 
 - `Cart.tsx` 가장 큰 단위로 작은 컴포넌트들이 모여있는 컴포넌트
@@ -32,25 +32,25 @@
 스타일링 방식은 여러 컴포넌트들을 구성하는 리액트의 특성과 잘 맞게 클래스 이름이 중첩되지 않게 해준다는 점이 마음에 들어 `CSS Module` 방식을 사용해 보았습니다.
 
 
-![CssModule이 적용 된 클래스 명 이미지](./className.png)
+![CssModule이 적용 된 클래스 명 이미지](/public/src/md/className.png)
 
 위 개발자 모드 사진을 보시면 CSS Module이 잘 적용된 것을 보실 수 있습니다.
 
 ### ✨ 디자인 커스텀
-![커스텀한 디자인 이미지](./design.png)
+![커스텀한 디자인 이미지](/public/src/md/design.png)
 
 장바구니를 조금 제 스타일대로 꾸며보았습니다. 바꾼 것은 배경색과 border type 정도지만 꽤 만족스러운 디자인이 되었습니다✨
 
 
 ## ✅ Lighthouse 결과
-![Lighthouse 결과 이미지](./Lighthouse.png)
+![Lighthouse 결과 이미지](/public/src/md/Lighthouse.png)
 
 접근성 준수가 잘 되었나 궁금하여 Lighthouse를 이용하여 성능 측정을 해보았습니다. 다행히 접근성 부분에서 100점이 나왔습니다.
 
 
 
 ## ✅ 구현 결과
-![구현 결과 gif](./output.gif)
+![구현 결과 gif](/public/src/md/output.gif)
 
 구현 결과는 위와 같습니다. 최소 픽셀인 320px보다 작은 화면으로 줄이려고 하면 내부의 요소가 ```overflow: hidden;``` 처리 되게 됩니다.
 
