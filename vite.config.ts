@@ -8,6 +8,7 @@ const viteConfig = defineConfig({
       jsxRuntime: 'automatic',
     }),
   ],
+  base: '/likelion-react-ex/',
   server: {
     host: 'localhost',
     port: 3000,
