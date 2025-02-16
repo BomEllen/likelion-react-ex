@@ -1,9 +1,20 @@
 import { tm } from '@/utils/tw-merge';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PauseSolid, PlaySolid, StopSolid } from '@mynaui/icons-react';
 
+const getDateNow = () => Date.now();
+
 function StopWatch() {
+  const [startTime, setStartTime] = useState(getDateNow);
+  const [nowTime, setNowTime] = useState(getDateNow);
   const [isStart, setIsStart] = useState(false);
+
+  useEffect(() => {
+    if (isStart) {
+      setStartTime(getDateNow);
+      setNowTime(getDateNow);
+    }
+  }, [isStart]);
 
   const handleStartOrPause = () => {
     setIsStart((s) => !s);
@@ -11,6 +22,8 @@ function StopWatch() {
 
   const handleStop = () => {
     setIsStart(false);
+    setStartTime(getDateNow);
+    setNowTime(getDateNow);
   };
 
   return (
@@ -19,7 +32,7 @@ function StopWatch() {
         dateTime="00:00:00:00"
         className="px-4 py-2 bg-black text-white text-lg text-center w-46 font-mono rounded-full"
       >
-        00:00:00:00
+        {nowTime - startTime}ms
       </time>
       <div className="flex gap-1">
         <button
