@@ -58,44 +58,44 @@ function StopWatch() {
   const timeInfo = formatTime(recordTime + nowTime - startTime);
 
   return (
-    <article aria-label="스톱워치" className="flex flex-col gap-2">
-      <time
-        dateTime={timeInfo}
-        className="px-4 py-2 bg-black text-white text-lg text-center w-46 font-mono rounded-full"
+    <div className="flex justify-center items-center min-h-screen">
+      <article
+        aria-label="스톱워치"
+        className="flex flex-col items-center justify-center gap-4 w-[50vw] h-[35vh] bg-[#FFDAB9] border border-[#006400] text-[#006400] font-mono rounded-lg shadow-lg"
       >
-        {timeInfo}
-      </time>
-      <div className="flex gap-1">
-        <button
-          type="button"
-          onClick={handleStartOrPause}
-          aria-label={isStart ? '일시정지' : '시작'}
-          title={isStart ? '일시정지' : '시작'}
-          className={tm(
-            'cursor-pointer opacity-75',
-            'grid place-content-center',
-            'bg-react text-white px-7 py-0.5 rounded-full font-semibold',
-            'hover:opacity-100'
-          )}
-        >
-          {isStart ? <PauseSolid /> : <PlaySolid />}
-        </button>
-        <button
-          type="button"
-          onClick={handleStop}
-          aria-label="정지"
-          title="정지"
-          className={tm(
-            'cursor-pointer opacity-90',
-            'grid place-content-center',
-            'bg-sky-600 text-white px-7 py-0.5 rounded-full font-semibold',
-            'hover:opacity-100'
-          )}
-        >
-          <StopSolid />
-        </button>
-      </div>
-    </article>
+        <time dateTime={timeInfo} className="text-3xl font-bold">
+          {timeInfo}
+        </time>
+        <div className="flex gap-4">
+          <button
+            type="button"
+            onClick={handleStartOrPause}
+            aria-label={isStart ? '일시정지' : '시작'}
+            title={isStart ? '일시정지' : '시작'}
+            className={tm(
+              'cursor-pointer opacity-80 hover:opacity-100',
+              'flex items-center justify-center w-14 h-14 rounded-full',
+              'bg-green-600 text-white text-xl shadow-md'
+            )}
+          >
+            {isStart ? <PauseSolid /> : <PlaySolid />}
+          </button>
+          <button
+            type="button"
+            onClick={handleStop}
+            aria-label="정지"
+            title="정지"
+            className={tm(
+              'cursor-pointer opacity-80 hover:opacity-100',
+              'flex items-center justify-center w-14 h-14 rounded-full',
+              'bg-red-600 text-white text-xl shadow-md'
+            )}
+          >
+            <StopSolid />
+          </button>
+        </div>
+      </article>
+    </div>
   );
 }
 
