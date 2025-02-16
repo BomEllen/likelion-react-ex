@@ -1,19 +1,32 @@
 import { tm } from '@/utils/tw-merge';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { PauseSolid, PlaySolid, StopSolid } from '@mynaui/icons-react';
 
+const FPS = 1000 / 60;
 const getDateNow = () => Date.now();
+
+type IntervalId = ReturnType<typeof setInterval>;
 
 function StopWatch() {
   const [startTime, setStartTime] = useState(getDateNow);
   const [nowTime, setNowTime] = useState(getDateNow);
   const [isStart, setIsStart] = useState(false);
 
+  const intervalRef = useRef<IntervalId>(undefined);
+
   useEffect(() => {
     if (isStart) {
       setStartTime(getDateNow);
       setNowTime(getDateNow);
+
+      intervalRef.current = setInterval(() => {
+        setNowTime(getDateNow);
+      }, FPS);
+    } else {
+      clearInterval(intervalRef.current);
     }
+
+    return () => clearInterval(intervalRef.current);
   }, [isStart]);
 
   const handleStartOrPause = () => {
@@ -29,7 +42,7 @@ function StopWatch() {
   return (
     <article aria-label="스톱워치" className="flex flex-col gap-2">
       <time
-        dateTime="00:00:00:00"
+        dateTime={`${nowTime - startTime}ms`}
         className="px-4 py-2 bg-black text-white text-lg text-center w-46 font-mono rounded-full"
       >
         {nowTime - startTime}ms
