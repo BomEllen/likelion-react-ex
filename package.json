@@ -45,7 +45,10 @@
     "vite": "6.0.7"
   },
   "dependencies": {
+    "@mynaui/icons-react": "0.3.3",
+    "clsx": "2.1.1",
     "react": "19",
-    "react-dom": "19"
+    "react-dom": "19",
+    "tailwind-merge": "3.0.1"
   }
 }
