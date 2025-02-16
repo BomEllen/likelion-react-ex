@@ -1,7 +1,18 @@
 import { tm } from '@/utils/tw-merge';
-import { PlaySolid, StopSolid } from '@mynaui/icons-react';
+import { useState } from 'react';
+import { PauseSolid, PlaySolid, StopSolid } from '@mynaui/icons-react';
 
 function StopWatch() {
+  const [isStart, setIsStart] = useState(false);
+
+  const handleStartOrPause = () => {
+    setIsStart((s) => !s);
+  };
+
+  const handleStop = () => {
+    setIsStart(false);
+  };
+
   return (
     <article aria-label="스톱워치" className="flex flex-col gap-2">
       <time
@@ -13,8 +24,9 @@ function StopWatch() {
       <div className="flex gap-1">
         <button
           type="button"
-          aria-label="시작"
-          title="시작"
+          onClick={handleStartOrPause}
+          aria-label={isStart ? '일시정지' : '시작'}
+          title={isStart ? '일시정지' : '시작'}
           className={tm(
             'cursor-pointer opacity-75',
             'grid place-content-center',
@@ -22,10 +34,11 @@ function StopWatch() {
             'hover:opacity-100'
           )}
         >
-          <PlaySolid />
+          {isStart ? <PauseSolid /> : <PlaySolid />}
         </button>
         <button
           type="button"
+          onClick={handleStop}
           aria-label="정지"
           title="정지"
           className={tm(
