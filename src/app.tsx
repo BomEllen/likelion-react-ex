@@ -1,9 +1,9 @@
-import Cart from "./components/ShoppingCart-ex/Cart";
+import StopWatch from "./components/StopWatch-ex/StopWatch";
 
 function App() {
   return (
     <div>
-      <Cart />
+      <StopWatch />
     </div>
   );
 }
