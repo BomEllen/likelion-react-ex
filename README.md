@@ -8,6 +8,7 @@
 # 🍀과제 링크
 
 - [장바구니 과제 README 바로가기](https://github.com/BomEllen/likelion-react-ex/blob/552d752866d5d71cbb85cc4dcb923f17208b19d3/src/components/ShoppingCart-ex/md/README.md)
+- [스톱워치 과제 README 바로가기](https://github.com/BomEllen/likelion-react-ex/tree/main/src/components/StopWatch-ex/md)
 
 <br/>
 <br/>
